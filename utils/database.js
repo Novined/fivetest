@@ -26,7 +26,7 @@ if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
 }
 
 function setUpConnection() {
-    mongoose.connect(mongodb_connection_string);
+    mongoose.connect(connection_string);
 }
 
 function listArticles() {
