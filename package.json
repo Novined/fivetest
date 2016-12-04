@@ -4,8 +4,7 @@
     "description": "",
     "main": "app.js",
     "scripts": {
-        "preinstall": "npm install -g nodemon",
-        "start": "nodemon app.js"
+        "start": "node app.js"
     },
     "author": "Denis Lubyannikov",
     "license": "ISC",
