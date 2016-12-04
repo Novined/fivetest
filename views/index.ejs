@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Five test task</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/sorttable.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Five test task</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row main">
+            <div>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Заголовок</th>
+                                <th>Дата (БД)</th>
+                                <th>Дата (JS format)</th>
+                                <th>unixtime</th>
+                                <th>Ссылка</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <% include content/articlescontent.ejs %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row main">
+            <div>
+                <div class="table-responsive">
+                    <table id="words" class="table table-striped sortable">
+                        <thead>
+                            <tr>
+                                <th>Слово</th>
+                                <th>Количество</th>
+                            </tr>
+                        </thead>
+                        <tbody> 
+                            <% include content/wordscontent.ejs %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

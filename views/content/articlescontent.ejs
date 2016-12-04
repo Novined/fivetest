@@ -1,0 +1,9 @@
+ <% articles.forEach(function(article) { %>
+    <tr>
+        <td><%= article.title %></td>
+        <td><%= article.date %></td>
+        <td><%= new Date(article.date) %></td>
+        <td><%= Math.floor(new Date(article.date) / 1000); %>
+        <td> <a href="http://lenta.ru<%= article.link %>">http://lenta.ru<%= article.link %></a></td>
+    </tr>
+<% }); %>
