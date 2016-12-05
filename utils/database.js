@@ -14,10 +14,11 @@ require('../models/Word');
 const Article = mongoose.model('Article');
 const Word = mongoose.model('Word');
 var db_name = 'fivebacktest';
+
 // default to a 'localhost' configuration:
 var connection_string = '127.0.0.1:27017/' + db_name;
 // if OPENSHIFT env variables are present, use the available connection info:
-if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
+if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD !== 'undefined'){
   connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
   process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
   process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
